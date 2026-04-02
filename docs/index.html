@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AERIS-10 - Open Source Pulse Linear Frequency Modulated Phased Array Radar System. A low-cost 10.5 GHz radar for researchers, drone developers, and SDR enthusiasts.">
-    <meta name="keywords" content="radar, open source, phased array, SDR, FPGA, beamforming, LFM radar, 10.5GHz">
-    <meta name="author" content="AERIS-10 Project">
+    <meta name="description" content="AERIS-10 - Open Source Pulse Linear Frequency Modulated Phased Array Radar System">
     <title>AERIS-10 | Open Source Phased Array Radar System</title>
     <style>
+        /* Your existing CSS remains exactly the same */
         * {
             margin: 0;
             padding: 0;
@@ -21,7 +20,6 @@
             background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
         }
 
-        /* Navigation */
         .navbar {
             background: #1a1a2e;
             color: white;
@@ -68,7 +66,6 @@
             color: #00d4ff;
         }
 
-        /* Buttons */
         .btn {
             display: inline-block;
             padding: 0.75rem 1.5rem;
@@ -100,7 +97,6 @@
             color: #1a1a2e;
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: white;
@@ -139,14 +135,12 @@
             font-size: 0.9rem;
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
 
-        /* Section Headers */
         .section-header {
             text-align: center;
             margin-bottom: 3rem;
@@ -164,7 +158,6 @@
             margin: 0 auto;
         }
 
-        /* Cards Grid */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -199,7 +192,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Comparison Table */
         .comparison-table {
             background: white;
             border-radius: 10px;
@@ -229,7 +221,6 @@
             background: #f8f9fa;
         }
 
-        /* Hardware Architecture */
         .architecture {
             background: #1e1e2e;
             color: white;
@@ -249,7 +240,6 @@
             color: #00d4ff;
         }
 
-        /* Status Grid */
         .status-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -279,7 +269,6 @@
             color: #ffc107;
         }
 
-        /* Contributors Section */
         .contributors {
             background: white;
             border-radius: 10px;
@@ -295,7 +284,27 @@
             margin-top: 1rem;
         }
 
-        /* Footer */
+        /* NEW: Image styling */
+        .hero-image {
+            max-width: 100%;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .demo-image {
+            max-width: 100%;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .sponsor-image {
+            max-width: 200px;
+            margin: 1rem auto;
+            display: block;
+        }
+
         .footer {
             background: #1a1a2e;
             color: white;
@@ -309,10 +318,6 @@
             text-decoration: none;
         }
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
         .social-links {
             display: flex;
             justify-content: center;
@@ -321,27 +326,22 @@
             flex-wrap: wrap;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
                 gap: 1rem;
             }
-
             .nav-links {
                 justify-content: center;
             }
-
             .hero h1 {
                 font-size: 2rem;
             }
-
             .section-header h2 {
                 font-size: 2rem;
             }
         }
 
-        /* Badges */
         .badges-row {
             display: flex;
             justify-content: center;
@@ -362,15 +362,10 @@
             gap: 0.5rem;
         }
 
-        /* Misc */
         hr {
             margin: 2rem 0;
             border: none;
             border-top: 2px solid #e9ecef;
-        }
-
-        .text-center {
-            text-align: center;
         }
 
         .mt-4 {
@@ -388,7 +383,7 @@
                 <li><a href="#architecture">Architecture</a></li>
                 <li><a href="#status">Status</a></li>
                 <li><a href="#get-involved">Get Involved</a></li>
-                <li><a href="https://github.com/aeris10/aeris-radar" target="_blank">GitHub</a></li>
+                <li><a href="https://github.com/NawfalMotii79/PLFM_RADAR" target="_blank">GitHub</a></li>
             </ul>
         </div>
     </nav>
@@ -396,6 +391,9 @@
     <section class="hero">
         <h1>AERIS-10 <span>Open Source</span><br>Phased Array Radar</h1>
         <p>A low-cost, hackable 10.5 GHz phased array radar system with Pulse LFM modulation. Designed for researchers, drone developers, and serious SDR enthusiasts.</p>
+        
+        <!-- ADDED: Main radar image -->
+        <img src="img/radar-main.jpg" alt="AERIS-10 Radar System" class="hero-image" onerror="this.style.display='none'">
         
         <div class="hero-badges">
             <span class="badge">🔓 Open Source</span>
@@ -405,12 +403,12 @@
         </div>
 
         <div class="badges-row">
-            <a href="https://github.com/aeris10/aeris-radar" class="github-badge">
+            <a href="https://github.com/NawfalMotii79/PLFM_RADAR" class="github-badge">
                 <svg height="20" viewBox="0 0 16 16" width="20" fill="white"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
                 Star on GitHub
             </a>
-            <a href="#" class="github-badge" style="background:#00d4ff; color:#1a1a2e;">📖 Documentation</a>
-            <a href="#" class="github-badge" style="background:#ff4757;">🐛 Report Bug</a>
+            <a href="https://github.com/NawfalMotii79/PLFM_RADAR/blob/main/README.md" class="github-badge" style="background:#00d4ff; color:#1a1a2e;">📖 Documentation</a>
+            <a href="https://github.com/NawfalMotii79/PLFM_RADAR/issues" class="github-badge" style="background:#ff4757;">🐛 Report Bug</a>
         </div>
     </section>
 
@@ -418,6 +416,11 @@
         <div class="section-header">
             <h2>Project Overview</h2>
             <p>Democratizing radar technology through open-source hardware and software</p>
+        </div>
+
+        <!-- ADDED: Antenna array image -->
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <img src="img/antenna-array.jpg" alt="AERIS-10 Antenna Array" style="max-width: 100%; border-radius: 10px;" onerror="this.style.display='none'">
         </div>
 
         <div class="cards-grid">
@@ -465,7 +468,7 @@
                     <tr><td><strong>Antenna Type</strong></td><td>8×16 Patch Array</td><td>32×16 Slotted Waveguide</td></tr>
                     <tr><td><strong>Beam Steering</strong></td><td>Electronic (±45°)</td><td>Electronic (±45°)</td></tr>
                     <tr><td><strong>Mechanical Scan</strong></td><td>360° (stepper motor)</td><td>360° (stepper motor)</td></tr>
-                    <tr><td><strong>Output Power</strong></td><td>~1W</td><td>10W (GaN amplifier)</td></tr>
+                    <tr><td><strong>Output Power</strong></td><td>~1W×16</td><td>10W×16 (GaN amplifier)</td></tr>
                     <tr><td><strong>Processing</strong></td><td>FPGA + STM32</td><td>FPGA + STM32</td></tr>
                 </tbody>
             </table>
@@ -476,6 +479,11 @@
         <div class="section-header">
             <h2>System Architecture</h2>
             <p>Modular design with specialized components for optimal performance</p>
+        </div>
+
+        <!-- ADDED: System diagram -->
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <img src="img/system-diagram.png" alt="System Architecture Diagram" style="max-width: 100%; border-radius: 10px;" onerror="this.style.display='none'">
         </div>
 
         <div class="architecture">
@@ -505,6 +513,11 @@
 │  └───────────────┘  └──────────────┘  └─────────────────┘   │
 └─────────────────────────────────────────────────────────────┘
             </pre>
+        </div>
+
+        <!-- ADDED: GUI Demo GIF -->
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="img/gui-demo.gif" alt="AERIS-10 GUI Demo" class="demo-image" onerror="this.style.display='none'">
         </div>
 
         <div class="cards-grid mt-4">
@@ -589,7 +602,7 @@
                 <a href="#" class="btn btn-outline">Discord Community</a>
                 <a href="#" class="btn btn-outline">GitHub Discussions</a>
                 <a href="#" class="btn btn-outline">Twitter @AERIS10Radar</a>
-                <a href="#" class="btn btn-primary">Contribute on GitHub</a>
+                <a href="https://github.com/NawfalMotii79/PLFM_RADAR" class="btn btn-primary">Contribute on GitHub</a>
             </div>
         </div>
     </div>
@@ -626,18 +639,23 @@
                 <p>Common issues and solutions.</p>
             </div>
         </div>
+        
+        <!-- ADDED: Sponsor logo -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <img src="img/pcbway-logo.jpg" alt="PCBWay Sponsor" class="sponsor-image" onerror="this.style.display='none'">
+        </div>
     </div>
 
     <footer class="footer">
         <div class="social-links">
-            <a href="#">GitHub</a>
+            <a href="https://github.com/NawfalMotii79/PLFM_RADAR">GitHub</a>
             <a href="#">Discord</a>
             <a href="#">Twitter</a>
-            <a href="#">Documentation</a>
+            <a href="https://github.com/NawfalMotii79/PLFM_RADAR/blob/main/README.md">Documentation</a>
             <a href="#">Contact</a>
         </div>
         <p>© 2025 AERIS-10 Project. Open source hardware and software.</p>
-        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">Licensed under MIT License | Built with ❤️ for the open-source community</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">Hardware: CERN-OHL-P | Software: MIT | Built with ❤️ for the open-source community</p>
     </footer>
 </body>
 </html>
