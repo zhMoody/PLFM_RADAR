@@ -291,9 +291,12 @@ class Mixer:
         Convert 8-bit unsigned ADC to 18-bit signed.
         RTL: adc_signed_w = {1'b0, adc_data, {9{1'b0}}} -
                             {1'b0, {8{1'b1}}, {9{1'b0}}} / 2
-        = (adc_data << 9) - (0xFF << 9) / 2
-        = (adc_data << 9) - (0xFF << 8)  [integer division]
-        = (adc_data << 9) - 0x7F80
+
+        Verilog '/' binds tighter than '-', so the division applies
+        only to the second concatenation:
+            {1'b0, 8'hFF, 9'b0} = 0x1FE00
+            0x1FE00 / 2 = 0xFF00 = 65280
+        Result: (adc_data << 9) - 0xFF00
         """
         adc_data_8bit = adc_data_8bit & 0xFF
         # {1'b0, adc_data, 9'b0} = adc_data << 9, zero-padded to 18 bits
